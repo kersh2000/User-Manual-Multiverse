@@ -1,0 +1,221 @@
+body {
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+img {
+  display: block;
+}
+
+a {
+  font-family: 'Gemunu Libre', sans-serif;
+  font-style: italic;
+}
+
+.leftBullet, .rightBullet{
+  margin-bottom: 40px;
+  padding-right: 2vw;
+  padding-top: 5px; padding-bottom: 5px;
+  width: 70vw;
+  border-radius: 8px;
+  transition: transform, 0.4s;
+}
+
+.leftBullet {
+  margin-left: 7vw;
+  margin-right: auto;
+}
+
+
+
+.rightBullet {
+  margin-left: auto;
+  margin-right: 7vw;
+}
+
+h1 {
+  font-family: 'Gemunu Libre', sans-serif;;
+  text-align: center;
+  text-shadow: 2px 2px 1px darkgrey;
+  margin: 4px;
+}
+
+#ulStyles {
+  background-color: #ACDDDE;
+  box-shadow: min(4vw, 20px) min(4vw, 20px) 10px #2d6f71;
+}
+
+#ulValues {
+  background-color: #CAF1DE;
+  box-shadow: min(4vw, 20px) min(4vw, 20px) 10px #258c5a;
+}
+
+#ulPatience {
+  background-color: #E1F8DC;
+  box-shadow: min(4vw, 20px) min(4vw, 20px) 10px #359c1f;
+}
+
+#ulCommunication {
+  background-color: #FEF8DD;
+  box-shadow: min(4vw, 20px) min(4vw, 20px) 10px #b99805;
+}
+
+#ulHelp {
+  background-color: #FFE7C7;
+  box-shadow: min(4vw, 20px) min(4vw, 20px) 10px #b66800;
+}
+
+#ulMisunderstood {
+  background-color: #F7D8BA;
+  box-shadow: min(4vw, 20px) min(4vw, 20px) 10px #9b5512;
+}
+
+#ulPersonality {
+  width: max(min(20vw, 150px), 200px);
+  background-color: #ffbcad;
+  box-shadow: min(4vw, 20px) min(4vw, 20px) 10px #ab1f00;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+nav a{
+  background-color: #258c5a;
+  font-style: normal;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 5px;
+  border: 1px solid white;
+  transition: opacity 0.3s;
+  transition: border-color 0.3s;
+}
+
+#bottom {
+  background-color: lightblue;
+}
+
+h2 {
+  margin: 0;
+}
+
+#bottomImages {
+  display: flex;
+  flex: 1;
+  background-color: lightblue;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#bottomImages img {
+  width: 100px;
+  height: 100px;
+  margin: min(4vw, 20px);
+  border-radius: 100%;
+  background-color: white;
+  transition: transform 0.4s;
+}
+
+#bottomImages img:hover {
+  transform: scale(1.25);
+}
+
+h2 {
+  font-family: 'Gemunu Libre', sans-serif;
+  font-weight: 200;
+  font-size: 40px;
+  grid-column: span 4;
+  text-align: center;
+  color: white;
+}
+
+strong {
+  font-family: 'Gemunu Libre', sans-serif;
+  font-weight: 800;
+}
+
+li {
+  font-family: 'Gemunu Libre', sans-serif;
+  font-weight: 300;
+}
+
+#contactImages img {
+  width: 5vw;
+  margin: auto;
+}
+
+#contactImages {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+h3 {
+  margin: 0;
+  margin-bottom: 5px;
+  font-family: 'Gemunu Libre', sans-serif;
+  text-align: center;
+  background-color: lightpink;
+  font-size: min(6vw, 20px);
+}
+
+/* Mobiles and small tablets */
+@media (max-width: 767px) {
+
+  #bottomImages img {
+    width: 20vw;
+    height: 20vw;
+  }
+
+  #bottomImages img:hover {
+    transform: none;
+  }
+
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  li, strong {
+    font-size: max(3vw, 16px);
+  }
+
+  #contactImages img {
+    width: 60px;
+  }
+
+  nav a {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: min(16vw, 36px);
+  }
+}
+
+/* Large tablets and desktops */
+@media (min-width: 768px) {
+  .leftBullet:hover, .rightBullet:hover {
+    transform: scale(1.04);
+  }
+
+  nav a:hover {
+    opacity: 0.8;
+    border-color: black;
+  }
+
+  nav a:active {
+    opacity: 0.4;
+    border-color: white;
+  }
+}
